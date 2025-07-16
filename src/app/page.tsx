@@ -211,9 +211,10 @@ export default function Home() {
               </button>
               {showFunFacts && (
                 <div className="ml-8 space-y-1" style={{ color: 'rgb(var(--foreground-rgb))' }}>
-                  <p><span className="text-yellow-400">&gt;</span> built a no-code quant trading platform that processes 12k+ market events</p>
-                  <p><span className="text-yellow-400">&gt;</span> optimized database query latency by 60% using advanced indexing techniques</p>
-                  <p><span className="text-yellow-400">&gt;</span> enjoy working with cutting-edge tech like gRPC, kubernetes, and cloud platforms</p>
+                  <p><span className="text-yellow-400">&gt;</span> built a multi-tenant backend powering an AI platform for 3,000+ enterprise users</p>
+                  <p><span className="text-yellow-400">&gt;</span> engineered systems sustaining 2M+ API calls monthly at 99.99% uptime</p>
+                  <p><span className="text-yellow-400">&gt;</span> developed RAG engine delivering 50k+ personalized recommendations/month</p>
+                  <p><span className="text-yellow-400">&gt;</span> reduced API latency 61% and cut cloud spend 22% through optimization</p>
                 </div>
               )}
             </div>

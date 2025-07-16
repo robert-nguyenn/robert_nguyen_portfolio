@@ -8,32 +8,32 @@ const experiences = [
     company: "Propvia",
     period: "Jun 2025 - Sep 2025",
     location: "Detroit, MI",
-    description: "Implemented a multi-tenant backend on PostgreSQL with row-level security and Auth0 OAuth, powering an AI property analysis platform for 500+ users with 1k+ records/month.",
-    tech: ["PostgreSQL", "Auth0", "REST API", "gRPC", "Apache Kafka", "Google Cloud Run", "Node.js"]
+    description: "Built multi-tenant backend on PostgreSQL with Auth0 OAuth, powering AI property platform for 3,000+ enterprise users. Developed RAG engine using OpenAI GPT API and Pinecone, delivering 50k+ personalized recommendations/month with 40% latency reduction.",
+    tech: ["PostgreSQL", "Auth0", "REST API", "gRPC", "Apache Kafka", "Google Cloud Run", "Node.js", "OpenAI", "Pinecone", "Redis"]
   },
   {
     title: "Software Engineer Intern", 
     company: "Theta Zero Consulting",
     period: "Dec 2024 - May 2025",
     location: "Lexington, KY",
-    description: "Delivered a CRM SaaS for 1,100+ real-estate users, storing client data in PostgreSQL and powering React/Django frontend. Instrumented OpenTelemetry traces with Prometheus & Grafana alerts.",
-    tech: ["React", "Django", "PostgreSQL", "OpenTelemetry", "Prometheus", "Grafana", "Docker"]
+    description: "Delivered CRM SaaS for 1,100+ tattoo-studio users, driving $20k+ monthly recurring revenue. Reduced API latency 61% and implemented monitoring with OpenTelemetry, cutting error detection time by 83%.",
+    tech: ["React", "Django", "PostgreSQL", "OpenTelemetry", "Prometheus", "Grafana", "Docker", "GitLab CI/CD", "Terraform", "Linux"]
   },
   {
     title: "Software Engineer Intern",
     company: "Novatek Technology", 
     period: "May 2024 - Nov 2024",
-    location: "hanoi, vietnam",
-    description: "Enhanced checkout reliability to 99.95% on a 10k+ MAU e-commerce platform by refactoring into a stateless gRPC microservice with Kubernetes deployments using rollback strategies.",
-    tech: ["gRPC", "Kubernetes", "Redis", "Lambda", "DynamoDB", "Terraform", "CI/CD", "Linux"]
+    location: "Hanoi, Vietnam",
+    description: "Enhanced checkout reliability to 99.95% on 10k+ MAU e-commerce platform using stateless gRPC microservices. Reduced cloud costs 22% ($3k/month) by migrating to Fargate Spot and optimizing AWS infrastructure.",
+    tech: ["gRPC", "Kubernetes", "Redis", "Lambda", "DynamoDB", "Terraform", "CI/CD", "Linux", "AWS", "ECS", "RDS", "Aurora"]
   },
   {
     title: "Undergraduate Researcher",
     company: "Centre College — Computer Science Department", 
     period: "Jan 2024 - May 2024",
     location: "Danville, KY",
-    description: "Processed soccer telemetry into 11k+ events/second with 98% extraction accuracy via a multithreaded Python pipeline. Optimized DuckDB for telemetry via spatial SQL queries.",
-    tech: ["Python", "DuckDB", "Multithreading", "Spatial SQL", "Data Processing"]
+    description: "Processed soccer telemetry into 11k+ events/second with 98% accuracy via multithreaded Python pipeline. Optimized BigQuery ETL, cutting query latency 60% and storage costs 30%.",
+    tech: ["Python", "BigQuery", "Multithreading", "SQL", "Machine Learning", "Data Processing"]
   }
 ]
 

@@ -6,8 +6,8 @@ import Header from "../components/Header"
 const projects = [
   {
     name: "Sphere — No-Code Quant Trading Platform",
-    description: "A SaaS startup with 3 co-founders currently raising seed funding. Drag-and-drop application for creating, backtesting, and paper-trading strategies using RAG to merge with 12k+ geopolitical events into trade signals. Private repository due to proprietary technology and ongoing funding discussions.",
-    tech: ["TypeScript", "Python", "Docker", "K8s", "Redis Streams", "Prisma", "gRPC/WebSocket"],
+    description: "A SaaS startup with 3 co-founders currently raising seed funding. Launched a drag-and-drop application for creating, backtesting, and paper-trading strategies using RAG to merge real-time macro data into trade signals. Engineered event-driven backend processing 12k+ market events per minute with sub-30ms latency for 1,000+ strategies. Private repository due to proprietary technology and ongoing funding discussions.",
+    tech: ["TypeScript", "Python", "Docker", "K8s", "Redis Streams", "Prisma", "gRPC/WebSocket", "BullMQ", "PostgreSQL"],
     github: null,
     live: null
   },
