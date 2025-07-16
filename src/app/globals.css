@@ -1,0 +1,225 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --foreground-rgb: 255, 255, 255;
+  --background-rgb: 0, 0, 0;
+  --terminal-green: 0, 255, 0;
+  --terminal-blue: 0, 150, 255;
+  --terminal-yellow: 255, 255, 0;
+  --terminal-red: 255, 0, 0;
+  --terminal-purple: 255, 0, 255;
+  --terminal-cyan: 0, 255, 255;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: rgb(var(--background-rgb));
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 15px;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Terminal cursor animation */
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+.cursor {
+  animation: blink 1s infinite;
+}
+
+/* Terminal text effects */
+.terminal-text {
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 400;
+}
+
+.terminal-header {
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 600;
+}
+
+/* Command prompt styling */
+.command-prompt {
+  color: rgb(var(--terminal-green));
+}
+
+.command-input {
+  color: rgb(var(--terminal-blue));
+}
+
+.command-output {
+  color: rgb(var(--foreground-rgb));
+}
+
+/* Link styling */
+.terminal-link {
+  color: rgb(var(--terminal-cyan));
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.terminal-link:hover {
+  color: rgb(var(--terminal-yellow));
+  text-decoration: underline;
+}
+
+/* Button styling */
+.terminal-button {
+  background: transparent;
+  border: 1px solid rgb(var(--terminal-green));
+  color: rgb(var(--terminal-green));
+  padding: 8px 16px;
+  font-family: 'JetBrains Mono', monospace;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.terminal-button:hover {
+  background: rgb(var(--terminal-green));
+  color: rgb(var(--background-rgb));
+}
+
+/* Section styling */
+.terminal-section {
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-top: 25px;
+}
+
+/* Code block styling */
+.code-block {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 16px;
+  border-radius: 4px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 14px;
+  overflow-x: auto;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: transparent;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: transparent;
+}
+
+/* Force scrollbar to always be present to prevent layout shifts */
+html {
+  overflow-y: scroll;
+}
+
+/* Selection styling */
+::selection {
+  background: rgb(var(--terminal-green));
+  color: rgb(var(--background-rgb));
+}
+
+/* Focus styling - removed green outline */
+*:focus {
+  outline: none;
+}
+
+/* Remove focus outline from buttons and interactive elements */
+button:focus,
+input:focus,
+a:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+/* Animation utilities */
+.fade-in {
+  animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.typewriter {
+  overflow: hidden;
+  border-right: 2px solid rgb(var(--terminal-green));
+  white-space: nowrap;
+  animation: typing 3s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: rgb(var(--terminal-green)); }
+}
+
+/* Terminal border */
+.terminal-glass {
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+/* Windows terminal styling */
+.terminal-windows {
+  border: 1px solid rgba(0, 150, 255, 0.6);
+  border-radius: 0;
+  box-shadow: 0 0 8px rgba(0, 150, 255, 0.4);
+  background: rgba(0, 0, 0, 0.95);
+}
+
+/* Terminal status bar styling */
+.terminal-status-bar {
+  width: 100%;
+  padding: 6px 16px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 13px;
+  background: rgba(30, 30, 30, 0.95);
+  color: #b5f4a5;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  border-radius: 0 0 12px 12px;
+  z-index: 10;
+}
+
+.terminal-windows .terminal-status-bar {
+  background: rgba(0, 30, 60, 0.97);
+  color: #7ecbff;
+  border-radius: 0;
+  border-top: 1px solid rgba(0,150,255,0.2);
+}
