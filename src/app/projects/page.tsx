@@ -5,46 +5,26 @@ import Header from "../components/Header"
 
 const projects = [
   {
-    name: "resumezip.io",
-    description: "LaTeX resume generator with AI-powered content suggestions",
-    tech: ["Go", "Docker", "AWS ECS/S3", "PostgreSQL", "Next.js", "TypeScript", "Redis"],
-    github: "https://github.com/ianhoangdev/resumezip",
-    live: "https://resumezip.io"
-  },
-  {
-    name: "neuroDB.ai",
-    description: "In-browser semantic search engine using Rust/WASM",
-    tech: ["SvelteKit", "Rust", "JavaScript", "WASM", "Hugging Face"],
-    github: "https://github.com/ianhoangdev/neuroDB",
-    live: "https://neurodbai.vercel.app"
-  },
-  {
-    name: "BlockRaise",
-    description: "Web3 crowdfunding platform with Solidity smart contracts",
-    tech: ["Next.js", "Solidity", "Ethereum", "Web3.js", "TailwindCSS", "TypeScript"],
-    github: "https://github.com/ianhoangdev/BlockRaise",
-    live: "https://blockraise.netlify.app"
-  },
-  {
-    name: "Wordhunt Solver",
-    description: "High-speed C++ solver using trie and backtracking algorithms",
-    tech: ["C++", "WebAssembly", "React", "TypeScript", "Trie Algorithm", "Backtracking"],
-    github: "https://github.com/ianhoangdev/wordhuntsolver",
-    live: "https://wordhuntsolver.vercel.app"
-  },
-  {
-    name: "ML Football Analyzer",
-    description: "Computer vision system to track players using YOLO object detection",
-    tech: ["Python", "OpenCV", "YOLO", "TensorFlow", "NumPy", "Pandas"],
-    github: "https://github.com/ianhoangdev/MLFootballAnalysis",
+    name: "Sphere — No-Code Quant Trading Platform",
+    description: "A drag-and-drop application for creating, backtesting, and paper-trading strategies using RAG to merge with 12k+ geopolitical events into trade signals",
+    tech: ["TypeScript", "Python", "Docker", "K8s", "Redis Streams", "Prisma", "gRPC/WebSocket"],
+    github: "https://github.com/robert-nguyenn/sphinx-no-code-quant-trading-platform",
     live: null
-  }
+  },
+  {
+    name: "Distributed Task Scheduler",
+    description: "Event-driven Node.js backend with distributed messaging using RAG & LLMs, PostgreSQL, processing 12k+ market events while handling sub-300 ms latency",
+    tech: ["Node.js", "PostgreSQL", "Redis", "Docker", "Kubernetes", "Event-driven Architecture"],
+    github: null,
+    live: null
+  },
 ]
 
 const skills = {
-  languages: ["Go", "Python", "Java", "C++", "JavaScript", "TypeScript", "SQL"],
-  technologies: ["React", "Next.js", "AWS", "Docker", "PostgreSQL", "MongoDB", "Spring Boot"],
-  other: ["Machine Learning", "Distributed Systems", "Unity", "System Design"]
+  languages: ["Python", "Java", "C++", "TypeScript", "JavaScript", "SQL", "Go", "Bash"],
+  frameworks: ["PostgreSQL", "DynamoDB", "MongoDB", "Redis", "Kafka", "RabbitMQ", "Amazon SQS", "Pinecone"],
+  technologies: ["gRPC", "REST", "GraphQL", "Protocol Buffers", "Node.js", "Spring Boot", "Express", "FastAPI", "Prisma ORM", "Hibernate", "Supabase", "Apache Spark"],
+  cloud: ["Amazon Web Services", "Google Cloud Run", "Kubernetes", "Docker", "Terraform", "CI/CD", "Linux", "Git", "Postman", "CUDA"]
 }
 
 export default function Projects() {
@@ -63,12 +43,16 @@ export default function Projects() {
                 <span>{skills.languages.map(lang => lang.toLowerCase()).join(', ')}</span>
               </div>
               <div className="flex flex-wrap items-baseline gap-x-2 text-sm text-gray-300">
+                <span className="text-cyan-400 font-semibold whitespace-nowrap">frameworks:</span>
+                <span>{skills.frameworks.map(tech => tech.toLowerCase()).join(', ')}</span>
+              </div>
+              <div className="flex flex-wrap items-baseline gap-x-2 text-sm text-gray-300">
                 <span className="text-cyan-400 font-semibold whitespace-nowrap">technologies:</span>
                 <span>{skills.technologies.map(tech => tech.toLowerCase()).join(', ')}</span>
               </div>
               <div className="flex flex-wrap items-baseline gap-x-2 text-sm text-gray-300">
-                <span className="text-cyan-400 font-semibold whitespace-nowrap">other:</span>
-                <span>{skills.other.map(item => item.toLowerCase()).join(', ')}</span>
+                <span className="text-cyan-400 font-semibold whitespace-nowrap">cloud & devops:</span>
+                <span>{skills.cloud.map(item => item.toLowerCase()).join(', ')}</span>
               </div>
             </div>
           </div>
@@ -86,12 +70,14 @@ export default function Projects() {
                   tech: {project.tech.map(tech => tech.toLowerCase()).join(', ')}
                 </div>
                 <div className="text-gray-400 text-xs mt-1 flex flex-wrap items-center gap-x-2">
-                  <a href={project.github} target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:text-yellow-400 flex items-center">
-                    github<FiGithub className="inline w-3 h-3 ml-1" />
-                  </a>
+                  {project.github && (
+                    <a href={project.github} target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:text-yellow-400 flex items-center">
+                      github<FiGithub className="inline w-3 h-3 ml-1" />
+                    </a>
+                  )}
                   {project.live && (
                     <>
-                      <span className="mx-1">•</span>
+                      {project.github && <span className="mx-1">•</span>}
                       <a href={project.live} target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:text-yellow-400 flex items-center">
                         live<FiExternalLink className="inline w-3 h-3 ml-1" />
                       </a>

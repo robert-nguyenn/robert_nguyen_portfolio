@@ -1,42 +1,46 @@
-# Portfolio Website
+# Robert Nguyen's Portfolio
 
-A modern, responsive portfolio website built with Next.js, TypeScript, and Tailwind CSS. Features a clean design, dark mode support, and smooth animations.
+A modern, terminal-style portfolio website built with Next.js, TypeScript, and Tailwind CSS. Features a unique command-line interface design with interactive elements.
 
 ## 🚀 Features
+
+- **Terminal-Inspired Design**
+  - Interactive command line interface
+  - Terminal-style navigation and commands
+  - Green terminal theme with retro aesthetics
+  - Keyboard shortcuts for quick navigation
 
 - **Modern Tech Stack**
   - Next.js 15 with App Router
   - TypeScript for type safety
   - Tailwind CSS for styling
-  - Framer Motion for animations
+  - React Icons for iconography
 
-- **Design**
-  - Responsive layout for all devices
-  - Dark/Light mode support
-  - Handwriting-style fonts (Caveat, Permanent Marker)
-  - Smooth page transitions and animations
-  - Gradient text and backgrounds
+- **Interactive Elements**
+  - Command-based navigation (help, about, proj, exp, clear, motd)
+  - Keyboard shortcuts (⌘+K, ⌘+A, ⌘+P, ⌘+E, etc.)
+  - Responsive terminal design
+  - Cat GIFs for fun interactions
 
 - **Pages**
-  - Home: Introduction and skills overview
-  - Projects: Showcase of development work with filtering
-  - Experience: Professional experience timeline
+  - Home: Terminal interface with interactive commands
+  - Projects: Showcase of development work including trading platforms and distributed systems
+  - Experience: Professional internship timeline (Propvia, Theta Zero, Novatek, Centre College)
   - Contact: Contact information and social links
 
-## 🛠️ Technologies
+## 🛠️ Technologies & Skills
 
-- **Frontend**
-  - Next.js
-  - TypeScript
-  - Tailwind CSS
-  - Framer Motion
-  - React Icons
+### Languages
+Python, Java, C++, TypeScript, JavaScript, SQL, Go, Bash
 
-- **Styling**
-  - Custom gradients
-  - Responsive design
-  - Dark mode support
-  - Custom animations
+### Databases & Messaging  
+PostgreSQL, DynamoDB, MongoDB, Redis, Kafka, RabbitMQ, Amazon SQS, Pinecone
+
+### Technologies
+gRPC, REST, GraphQL, Protocol Buffers, Node.js, Spring Boot, Express, FastAPI, Prisma ORM, Hibernate, Supabase, Apache Spark
+
+### Cloud & DevOps
+Amazon Web Services, Google Cloud Run, Kubernetes, Docker, Terraform, CI/CD, Linux, Git, Postman, CUDA
 
 ## 🏃‍♂️ Getting Started
 
@@ -47,7 +51,7 @@ A modern, responsive portfolio website built with Next.js, TypeScript, and Tailw
 
 2. Install dependencies:
    ```bash
-   cd portfolio
+   cd robert_nguyen_portfolio
    npm install
    ```
 
@@ -58,31 +62,47 @@ A modern, responsive portfolio website built with Next.js, TypeScript, and Tailw
 
 4. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
+## 🖥️ Terminal Commands
+
+Type these commands in the terminal interface:
+
+- `help` or `⌘+Shift+H` - Show all available commands
+- `about` or `⌘+A` - Learn about Robert
+- `proj` or `⌘+P` - View projects
+- `exp` or `⌘+E` - See experience
+- `clear` or `⌘+K` - Clear terminal
+- `motd` or `⌘+B` - Display a random cat GIF
+
 ## 🎨 Customization
 
-- **Colors**: Edit the gradient colors in the Tailwind config
+- **Terminal Theme**: Edit the CSS variables for terminal colors
 - **Content**: Update the content in the respective page components
-- **Styling**: Modify the Tailwind classes to match your preferences
-- **Images**: Replace the profile image and project screenshots
+- **Commands**: Modify the commands object in the main page component
+- **Projects/Experience**: Update the data arrays in their respective files
 
 ## 📱 Responsive Design
 
-The portfolio is fully responsive and optimized for:
-- Desktop
-- Tablet
-- Mobile devices
+The portfolio features a fully responsive terminal interface optimized for:
+- Desktop with full keyboard shortcuts
+- Tablet with touch interactions
+- Mobile devices with simplified navigation
 
-## 🌙 Dark Mode
+## 🛡️ About Robert Nguyen
 
-The website supports both light and dark modes with:
-- Automatic system preference detection
-- Manual toggle option
-- Smooth transitions between modes
+Computer Science student at Centre College with extensive internship experience at:
+- **Propvia** - Software Engineer Intern (Jun 2025 - Sep 2025)
+- **Theta Zero Consulting** - Software Engineer Intern (Dec 2024 - May 2025)  
+- **Novatek Technology** - Software Engineer Intern (May 2024 - Nov 2024)
+- **Centre College** - Undergraduate Researcher (Jan 2024 - May 2024)
+
+Specializing in distributed systems, databases, and scalable software solutions.
 
 ## 🔗 Links
 
-- [Live Demo](https://your-portfolio-url.com)
 - [GitHub Repository](https://github.com/robert-nguyenn/robert_nguyen_portfolio)
+- [Robert's GitHub](https://github.com/robert-nguyenn)
+- [Robert's LinkedIn](https://linkedin.com/in/robert-nguyenn)
+- [Email](mailto:robert.nguyennh@gmail.com)
 
 ## 📝 License
 
@@ -90,7 +110,10 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ## 👨‍💻 Author
 
-Robert Nguyen
+**Robert Nguyen**
+- Email: robert.nguyennh@gmail.com
+- GitHub: [@robert-nguyenn](https://github.com/robert-nguyenn)
+- LinkedIn: [robert-nguyenn](https://linkedin.com/in/robert-nguyenn)
 - GitHub: [@robert-nguyenn](https://github.com/robert-nguyenn)
 - LinkedIn: [your-linkedin-profile](https://linkedin.com/in/your-linkedin-profile)
 - Email: your.email@example.com

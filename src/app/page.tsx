@@ -21,9 +21,9 @@ export default function Home() {
  /\\_/\\  
 ( o.o ) meow! here are your commands:
  > ^ <  </pre>help(<span class='text-yellow-400'>⌘+Shift+H</span>) - show help message<br>about(<span class='text-yellow-400'>⌘+A</span>) - learn about me<br>proj(<span class='text-yellow-400'>⌘+P</span>) - view my projects<br>exp(<span class='text-yellow-400'>⌘+E</span>) - see my experience<br>clear(<span class='text-yellow-400'>⌘+K</span>) - clear terminal<br>motd(<span class='text-yellow-400'>⌘+B</span>) - look at cat gif and smile`,
-    about: "hi my name is ian. learning and building, i love challenges. hit me up if you wanna talk about opportunities, anime, random shower thoughts, u name it:) (see contacts above)!",
-    proj: "i build web apps, devtools, and ai projects for funsies and impact.<br>check out my projects at <a href='/projects' class='text-cyan-400 hover:text-yellow-400'>/projects</a>",
-    exp: "i've interned at deepchatbi, research labs, and involved in ufcsu.<br>view my experience at <a href='/experience' class='text-cyan-400 hover:text-yellow-400'>/experience</a>",
+    about: "hi my name is robert. computer science student at centre college with a passion for building scalable software solutions. let's connect if you want to discuss tech, internships, or cool projects!",
+    proj: "i build full-stack applications, trading platforms, and data-driven solutions.<br>check out my projects at <a href='/projects' class='text-cyan-400 hover:text-yellow-400'>/projects</a>",
+    exp: "i've interned at propvia, theta zero consulting, novatek technology, and more.<br>view my experience at <a href='/experience' class='text-cyan-400 hover:text-yellow-400'>/experience</a>",
     clear: "clear",
     motd: "random cat gif - use the command to see a cat!",
     // Aliases for backward compatibility
@@ -160,7 +160,7 @@ export default function Home() {
               <span style={{ color: 'rgb(var(--foreground-rgb))' }}>$ </span>
               <span style={{ color: 'rgb(var(--foreground-rgb))' }}>whoami</span>
             </div>
-            <div className="command-output text-2xl font-bold" style={{ color: 'rgb(var(--foreground-rgb))' }}>ian hoang ツ</div>
+            <div className="command-output text-2xl font-bold" style={{ color: 'rgb(var(--foreground-rgb))' }}>robert nguyen ツ</div>
           </div>
 
           {/* About Section */}
@@ -173,8 +173,8 @@ export default function Home() {
               <span style={{ color: 'rgb(var(--foreground-rgb))' }}>cat about.txt</span>
             </div>
             <div className="command-output space-y-1" style={{ color: 'rgb(var(--foreground-rgb))' }}>
-              <p><span className="text-yellow-400">&gt;</span> hi, my name is ian! i'm studying computer science at the university of florida</p>
-              <p><span className="text-yellow-400">&gt;</span> love building cool projects, interested in cloud, backend, llm stuff</p>
+              <p><span className="text-yellow-400">&gt;</span> hi, my name is robert! i'm studying computer science at centre college</p>
+              <p><span className="text-yellow-400">&gt;</span> passionate about distributed systems, databases, and building scalable solutions</p>
               <button 
                 onClick={() => setShowFunFacts(!showFunFacts)}
                 className="text-left transition-colors"
@@ -186,9 +186,9 @@ export default function Home() {
               </button>
               {showFunFacts && (
                 <div className="ml-8 space-y-1" style={{ color: 'rgb(var(--foreground-rgb))' }}>
-                  <p><span className="text-yellow-400">&gt;</span> once cried at 5am while debugging cause i added an extra period to a redirect uri</p>
-                  <p><span className="text-yellow-400">&gt;</span> built a word hunt solver to beat my gf, but still got humbled (she high diff ai)</p>
-                  <p><span className="text-yellow-400">&gt;</span> can bend my fingers 90 degrees, binge watch 200 manga chapters in 1 night</p>
+                  <p><span className="text-yellow-400">&gt;</span> built a no-code quant trading platform that processes 12k+ market events</p>
+                  <p><span className="text-yellow-400">&gt;</span> optimized database query latency by 60% using advanced indexing techniques</p>
+                  <p><span className="text-yellow-400">&gt;</span> enjoy working with cutting-edge tech like gRPC, kubernetes, and cloud platforms</p>
                 </div>
               )}
             </div>
@@ -207,8 +207,8 @@ export default function Home() {
               <div className="space-y-4">
                 <div className="flex items-center space-x-4">
                   <span className="text-yellow-400">drwxr-xr-x</span>
-                  <span className="text-cyan-400">DeepChatBI</span>
-                  <span className="text-gray-400">swe intern (summer 2025)</span>
+                  <span className="text-cyan-400">Propvia</span>
+                  <span className="text-gray-400">software engineer intern (jun 2025 - sep 2025)</span>
                 </div>
               </div>
               <div className="mt-1">
@@ -232,10 +232,10 @@ export default function Home() {
               <div className="space-y-4">
                 <div className="flex items-center space-x-4">
                   <span className="text-yellow-400">drwxr-xr-x</span>
-                  <a href="https://resumezip.io" target="_blank" rel="noopener noreferrer" className="text-cyan-400">
-                    resumezip.io<FiExternalLink className="inline w-3 h-3 ml-1" />
+                  <a href="https://github.com/robert-nguyenn/sphinx-no-code-quant-trading-platform" target="_blank" rel="noopener noreferrer" className="text-cyan-400">
+                    sphinx trading platform<FiExternalLink className="inline w-3 h-3 ml-1" />
                    </a>
-                  <span className="text-gray-400">latex resume generator</span>
+                  <span className="text-gray-400">quant trading application</span>
                 </div>
               </div>
               <div className="mt-1">
@@ -258,13 +258,13 @@ export default function Home() {
             <div className="command-output" style={{ color: 'rgb(var(--foreground-rgb))' }}>
               <div className="flex flex-col md:flex-row items-start md:items-center gap-2 md:gap-8">
                 <div>
-                  <a href="mailto:ianhoang.dev@gmail.com" className="terminal-link"> ianhoang.dev@gmail.com</a>
+                  <a href="mailto:robert.nguyenanh@gmail.com" className="terminal-link"> robert.nguyennh@gmail.com</a>
                 </div>
                 <div>
-                  <a href="https://github.com/ianhoangdev" target="_blank" rel="noopener noreferrer" className="terminal-link"> github.com/ianhoangdev<FiExternalLink className="inline w-3 h-3" /></a>
+                  <a href="https://github.com/robert-nguyenn" target="_blank" rel="noopener noreferrer" className="terminal-link"> github.com/robert-nguyenn<FiExternalLink className="inline w-3 h-3" /></a>
                 </div>
                 <div>
-                  <a href="https://linkedin.com/in/ianhoangdev" target="_blank" rel="noopener noreferrer" className="terminal-link"> linkedin.com/in/ianhoangdev<FiExternalLink className="inline w-3 h-3" /></a>
+                  <a href="https://linkedin.com/in/robert-nguyenn" target="_blank" rel="noopener noreferrer" className="terminal-link"> linkedin.com/in/robert-nguyenn<FiExternalLink className="inline w-3 h-3" /></a>
                 </div>
               </div>
             </div>
@@ -311,13 +311,13 @@ export default function Home() {
 
           {/* Social Links and Connected Status */}
           <div className="flex space-x-6 mt-12">
-            <a href="https://github.com/ianhoangdev" target="_blank" rel="noopener noreferrer" className="terminal-link">
+            <a href="https://github.com/robert-nguyenn" target="_blank" rel="noopener noreferrer" className="terminal-link">
               <FiGithub className="w-6 h-6" />
             </a>
-            <a href="https://linkedin.com/in/ianhoangdev" target="_blank" rel="noopener noreferrer" className="terminal-link">
+            <a href="https://linkedin.com/in/robert-nguyenn" target="_blank" rel="noopener noreferrer" className="terminal-link">
               <FiLinkedin className="w-6 h-6" />
             </a>
-            <a href="mailto:ianhoang.dev@gmail.com" className="terminal-link">
+            <a href="mailto:robert.nguyennh@gmail.com" className="terminal-link">
               <FiMail className="w-6 h-6" />
             </a>
           </div>

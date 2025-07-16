@@ -47,7 +47,7 @@ export default function Contact() {
             <div className="w-3 h-3 bg-red-500 rounded-full"></div>
             <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
             <div className="w-3 h-3 bg-green-500 rounded-full"></div>
-            <span className="ml-4 text-sm text-gray-400">ian@portfolio:~/contact</span>
+            <span className="ml-4 text-sm text-gray-400">robert@portfolio:~/contact</span>
           </div>
         </div>
 
@@ -78,8 +78,8 @@ export default function Contact() {
                   <FiMail className="w-5 h-5 text-cyan-400" />
                   <div>
                     <span className="text-cyan-400">Email:</span>
-                    <a href="mailto:ianhoang.dev@gmail.com" className="terminal-link ml-2">
-                      ianhoang.dev@gmail.com
+                    <a href="mailto:robert.nguyennh@gmail.com" className="terminal-link ml-2">
+                      robert.nguyennh@gmail.com
                     </a>
                   </div>
                 </div>
@@ -87,8 +87,8 @@ export default function Contact() {
                   <FiGithub className="w-5 h-5 text-cyan-400" />
                   <div>
                     <span className="text-cyan-400">GitHub:</span>
-                    <a href="https://github.com/ianhoangdev" target="_blank" rel="noopener noreferrer" className="terminal-link ml-2">
-                  github.com/ianhoangdev
+                    <a href="https://github.com/robert-nguyenn" target="_blank" rel="noopener noreferrer" className="terminal-link ml-2">
+                  github.com/robert-nguyenn
                 </a>
                   </div>
                 </div>
@@ -96,8 +96,8 @@ export default function Contact() {
                   <FiLinkedin className="w-5 h-5 text-cyan-400" />
                   <div>
                     <span className="text-cyan-400">LinkedIn:</span>
-                    <a href="https://linkedin.com/in/ianhoangdev" target="_blank" rel="noopener noreferrer" className="terminal-link ml-2">
-                  linkedin.com/in/ianhoangdev
+                    <a href="https://linkedin.com/in/robert-nguyenn" target="_blank" rel="noopener noreferrer" className="terminal-link ml-2">
+                  linkedin.com/in/robert-nguyenn
                 </a>
                   </div>
                 </div>
@@ -233,7 +233,7 @@ export default function Contact() {
                 </div>
                 <div className="flex items-center space-x-4">
                   <span className="text-yellow-400">-rw-r--r--</span>
-                  <a href="mailto:ianhoang.dev@gmail.com" className="terminal-link">send-email</a>
+                  <a href="mailto:robert.nguyennh@gmail.com" className="terminal-link">send-email</a>
                   <span className="text-gray-400">Direct email</span>
                 </div>
               </div>

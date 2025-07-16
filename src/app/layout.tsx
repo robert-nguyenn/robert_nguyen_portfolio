@@ -4,21 +4,21 @@ import "./globals.css"
 // node addCatGifs.js
 
 export const metadata: Metadata = {
-  title: "ian's personal spot",
-  description: "Software Engineer & Computer Science Student at University of Florida. Full-stack developer passionate about building scalable applications.",
-  keywords: ["Software Engineer", "Full Stack Developer", "Computer Science", "React", "Next.js", "Python", "Machine Learning"],
-  authors: [{ name: "Ian Hoang" }],
-  creator: "Ian Hoang",
+  title: "robert's portfolio",
+  description: "Computer Science Student at Centre College. Software Engineer with experience in distributed systems, databases, and scalable applications.",
+  keywords: ["Software Engineer", "Computer Science", "Distributed Systems", "PostgreSQL", "gRPC", "Kubernetes", "Python", "Java", "TypeScript"],
+  authors: [{ name: "Robert Nguyen" }],
+  creator: "Robert Nguyen",
   openGraph: {
-    title: "ian's personal spot",
-    description: "Software Engineer & Computer Science Student at University of Florida",
+    title: "robert's portfolio",
+    description: "Computer Science Student at Centre College. Software Engineer specializing in distributed systems and databases.",
     type: "website",
     locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
-    title: "ian's personal spot",
-    description: "Software Engineer & Computer Science Student at University of Florida",
+    title: "robert's portfolio",
+    description: "Computer Science Student at Centre College. Software Engineer specializing in distributed systems and databases.",
   },
   icons: {
     icon: "/logo.svg"

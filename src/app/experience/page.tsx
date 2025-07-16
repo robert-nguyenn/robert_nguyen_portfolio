@@ -5,46 +5,47 @@ import Header from "../components/Header"
 const experiences = [
   {
     title: "Software Engineer Intern",
-    company: "DeepChatBI",
-    period: "May 2025 - Present",
-    location: "San Francisco, CA",
-    description: "AI services for natural language to SQL translation",
-    tech: ["Java", "Spring Boot", "PostgreSQL", "Snowflake", "Redis", "Claude API"]
+    company: "Propvia",
+    period: "Jun 2025 - Sep 2025",
+    location: "Detroit, MI",
+    description: "Implemented a multi-tenant backend on PostgreSQL with row-level security and Auth0 OAuth, powering an AI property analysis platform for 500+ users with 1k+ records/month.",
+    tech: ["PostgreSQL", "Auth0", "REST API", "gRPC", "Apache Kafka", "Google Cloud Run", "Node.js"]
   },
   {
     title: "Software Engineer Intern", 
-    company: "UF CSSALT",
-    period: "Jan 2025 - May 2025",
-    location: "Gainesville, FL",
-    description: "Real-time defibrillator simulation software",
-    tech: ["Unity", "C#", "Docker", "GitHub Actions", "CI/CD"]
+    company: "Theta Zero Consulting",
+    period: "Dec 2024 - May 2025",
+    location: "Lexington, KY",
+    description: "Delivered a CRM SaaS for 1,100+ real-estate users, storing client data in PostgreSQL and powering React/Django frontend. Instrumented OpenTelemetry traces with Prometheus & Grafana alerts.",
+    tech: ["React", "Django", "PostgreSQL", "OpenTelemetry", "Prometheus", "Grafana", "Docker"]
   },
   {
-    title: "Research Software Engineer",
-    company: "Ecosystem AI Lab", 
-    period: "Aug 2024 - Dec 2024",
-    location: "Gainesville, FL",
-    description: "ML research for environmental quality analysis",
-    tech: ["Python", "TensorFlow", "ResNet-50", "D3.js", "Flask", "PostGIS"]
+    title: "Software Engineer Intern",
+    company: "Novatek Technology", 
+    period: "May 2024 - Nov 2024",
+    location: "hanoi, vietnam",
+    description: "Enhanced checkout reliability to 99.95% on a 10k+ MAU e-commerce platform by refactoring into a stateless gRPC microservice with Kubernetes deployments using rollback strategies.",
+    tech: ["gRPC", "Kubernetes", "Redis", "Lambda", "DynamoDB", "Terraform", "CI/CD", "Linux"]
+  },
+  {
+    title: "Undergraduate Researcher",
+    company: "Centre College — Computer Science Department", 
+    period: "Jan 2024 - May 2024",
+    location: "Danville, KY",
+    description: "Processed soccer telemetry into 11k+ events/second with 98% extraction accuracy via a multithreaded Python pipeline. Optimized DuckDB for telemetry via spatial SQL queries.",
+    tech: ["Python", "DuckDB", "Multithreading", "Spatial SQL", "Data Processing"]
   }
 ]
 
 const education = {
-  degree: "B.S. in Computer Science",
-  school: "University of Florida",
+  degree: "Bachelor of Science in Computer Science",
+  school: "Centre College",
   period: "Aug 2023 - May 2027",
-  gpa: "3.9/4.0",
-  location: "Gainesville, FL",
-  courses: ["Data Structures", "Operating Systems", "Computer Organization", "Discrete Math", "Linear Algebra"]
+  gpa: "3.89/4.0",
+  location: "Danville, KY",
+  courses: ["Data Structures and Algorithms", "Distributed Systems", "Operating Systems", "Computer Networks", "Database Systems", "Object-Oriented Programming"]
 }
 
-const leadership = {
-  title: "Membership Director",
-  org: "UF Computing Student Union",
-  period: "Mar 2025 - Present",
-  location: "Gainesville, FL",
-  description: "Recruitment and retention strategies for computing club"
-}
 
 export default function Experience() {
   return (
@@ -83,18 +84,6 @@ export default function Experience() {
             </div>
           </div>
 
-          {/* Leadership */}
-          <div>
-            <div className="text-yellow-400 mb-3">// leadership</div>
-            <div className="ml-4 mb-3">
-              <div className="flex flex-wrap items-baseline gap-x-2">
-                <span className="text-cyan-400 font-semibold whitespace-nowrap">{leadership.title.toLowerCase()}</span>
-                <span style={{ color: 'rgb(var(--terminal-green))' }}>{leadership.org}</span>
-              </div>
-              <div className="text-gray-400 text-sm">{leadership.period.toLowerCase()} • {leadership.location.toLowerCase()}</div>
-              <div className="text-gray-300 text-sm mt-1">{leadership.description.toLowerCase()}</div>
-            </div>
-          </div>
         </div>
       </div>
     </div>
