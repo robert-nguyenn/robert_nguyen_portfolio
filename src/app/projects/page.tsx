@@ -6,9 +6,9 @@ import Header from "../components/Header"
 const projects = [
   {
     name: "Sphere — No-Code Quant Trading Platform",
-    description: "A drag-and-drop application for creating, backtesting, and paper-trading strategies using RAG to merge with 12k+ geopolitical events into trade signals",
+    description: "A SaaS startup with 3 co-founders currently raising seed funding. Drag-and-drop application for creating, backtesting, and paper-trading strategies using RAG to merge with 12k+ geopolitical events into trade signals. Private repository due to proprietary technology and ongoing funding discussions.",
     tech: ["TypeScript", "Python", "Docker", "K8s", "Redis Streams", "Prisma", "gRPC/WebSocket"],
-    github: "https://github.com/robert-nguyenn/sphinx-no-code-quant-trading-platform",
+    github: null,
     live: null
   },
   {

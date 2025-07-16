@@ -17,10 +17,24 @@ export default function Home() {
 
   const commands = {
     help:
-      `<pre style="font-family: 'JetBrains Mono', monospace; color: #fff; margin-bottom: 0; line-height: 1.1;">
- /\\_/\\  
-( o.o ) meow! here are your commands:
- > ^ <  </pre>help(<span class='text-yellow-400'>⌘+Shift+H</span>) - show help message<br>about(<span class='text-yellow-400'>⌘+A</span>) - learn about me<br>proj(<span class='text-yellow-400'>⌘+P</span>) - view my projects<br>exp(<span class='text-yellow-400'>⌘+E</span>) - see my experience<br>clear(<span class='text-yellow-400'>⌘+K</span>) - clear terminal<br>motd(<span class='text-yellow-400'>⌘+B</span>) - look at cat gif and smile`,
+      `<pre style="font-family: 'JetBrains Mono', monospace; color: #32cd32; margin-bottom: 8px; line-height: 1.2;">
+┌─────────────────────────────────────────┐
+│  Welcome to Robert's Terminal Portfolio │
+│                                         │
+│     /\\_/\\     Available Commands:       │
+│    ( o.o )                              │
+│     > ^ <                               │
+└─────────────────────────────────────────┘</pre><div style="color: #20b2aa; line-height: 1.4;">
+<strong>📝 Navigation Commands:</strong><br>
+&nbsp;&nbsp;help<span style="color: #ffd700;"> (⌘+Shift+H)</span> - show this help message<br>
+&nbsp;&nbsp;about<span style="color: #ffd700;"> (⌘+A)</span> - learn about me<br>
+&nbsp;&nbsp;proj<span style="color: #ffd700;"> (⌘+P)</span> - view my projects<br>
+&nbsp;&nbsp;exp<span style="color: #ffd700;"> (⌘+E)</span> - see my experience<br><br>
+<strong>🛠️ Utility Commands:</strong><br>
+&nbsp;&nbsp;clear<span style="color: #ffd700;"> (⌘+K)</span> - clear terminal<br>
+&nbsp;&nbsp;motd<span style="color: #ffd700;"> (⌘+B)</span> - look at cat gif and smile<br><br>
+<span style="color: #a9a9a9;">💡 Tip: Use keyboard shortcuts for faster navigation!</span>
+</div>`,
     about: "hi my name is robert. computer science student at centre college with a passion for building scalable software solutions. let's connect if you want to discuss tech, internships, or cool projects!",
     proj: "i build full-stack applications, trading platforms, and data-driven solutions.<br>check out my projects at <a href='/projects' class='text-cyan-400 hover:text-yellow-400'>/projects</a>",
     exp: "i've interned at propvia, theta zero consulting, novatek technology, and more.<br>view my experience at <a href='/experience' class='text-cyan-400 hover:text-yellow-400'>/experience</a>",
@@ -127,13 +141,11 @@ export default function Home() {
       }
     }
 
-    // Use both keydown and keyup events for better Safari compatibility
+    // Only use keydown event to prevent duplicate execution
     document.addEventListener('keydown', handleGlobalKeyPress, true)
-    document.addEventListener('keyup', handleGlobalKeyPress, true)
     
     return () => {
       document.removeEventListener('keydown', handleGlobalKeyPress, true)
-      document.removeEventListener('keyup', handleGlobalKeyPress, true)
     }
   }, [])
 
@@ -142,35 +154,48 @@ export default function Home() {
   }, [commandHistory, outputHistory])
 
   return (
-    <div className="min-h-screen bg-black text-green-400 px-6 py-8" style={{ color: 'rgb(var(--terminal-green))' }}>
-      <div className="max-w-4xl mx-auto terminal-glass p-6">
+    <div className="min-h-screen bg-black text-green-400 px-6 py-8 relative" style={{ color: 'rgb(var(--terminal-green))' }}>
+      {/* Matrix background */}
+      <div className="matrix-bg"></div>
+      
+      <div className="max-w-4xl mx-auto terminal-glass p-6 relative">
         <Header currentPath="~" showBackButton={false} />
 
-        {/* Spacer to match back button height on other pages */}
-        <div className="mb-6"></div>
+        {/* Terminal welcome message */}
+        <div className="mb-4 text-sm" style={{ color: 'rgb(var(--terminal-dim-white))' }}>
+          <div className="flex items-center space-x-2">
+            <span className="text-green-400">●</span>
+            <span>Last login: {new Date().toLocaleDateString()} at {new Date().toLocaleTimeString()}</span>
+          </div>
+          <div className="mt-1">Welcome to robert's portfolio terminal. Type 'help' for commands.</div>
+        </div>
 
         {/* Main Content */}
         <div>
           {/* Whoami Section */}
           <div className="terminal-section">
-            <div className="mb-1">
-              <span style={{ color: 'rgb(var(--terminal-green))' }}>guest@portfolio</span>
+            <div className="mb-1 flex items-center">
+              <span className="command-prompt">robert@portfolio</span>
               <span style={{ color: 'rgb(var(--foreground-rgb))' }}>:</span>
               <span className="text-yellow-400">~</span>
               <span style={{ color: 'rgb(var(--foreground-rgb))' }}>$ </span>
-              <span style={{ color: 'rgb(var(--foreground-rgb))' }}>whoami</span>
+              <span className="command-input">whoami</span>
             </div>
-            <div className="command-output text-2xl font-bold" style={{ color: 'rgb(var(--foreground-rgb))' }}>robert nguyen ツ</div>
+            <div className="command-output text-2xl font-bold flex items-center space-x-2" style={{ color: 'rgb(var(--foreground-rgb))' }}>
+              <span>robert nguyen</span>
+              <span className="text-lg">ツ</span>
+              <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse ml-2"></div>
+            </div>
           </div>
 
           {/* About Section */}
           <div className="terminal-section">
-            <div className="mb-1">
-              <span style={{ color: 'rgb(var(--terminal-green))' }}>guest@portfolio</span>
+            <div className="mb-1 flex items-center">
+              <span className="command-prompt">robert@portfolio</span>
               <span style={{ color: 'rgb(var(--foreground-rgb))' }}>:</span>
               <span className="text-yellow-400">~</span>
               <span style={{ color: 'rgb(var(--foreground-rgb))' }}>$ </span>
-              <span style={{ color: 'rgb(var(--foreground-rgb))' }}>cat about.txt</span>
+              <span className="command-input">cat about.txt</span>
             </div>
             <div className="command-output space-y-1" style={{ color: 'rgb(var(--foreground-rgb))' }}>
               <p><span className="text-yellow-400">&gt;</span> hi, my name is robert! i'm studying computer science at centre college</p>
@@ -196,12 +221,12 @@ export default function Home() {
 
           {/* Current Experience Section */}
           <div className="terminal-section">
-            <div className="mb-1">
-              <span style={{ color: 'rgb(var(--terminal-green))' }}>guest@portfolio</span>
+            <div className="mb-1 flex items-center">
+              <span className="command-prompt">robert@portfolio</span>
               <span style={{ color: 'rgb(var(--foreground-rgb))' }}>:</span>
               <span className="text-yellow-400">~</span>
               <span style={{ color: 'rgb(var(--foreground-rgb))' }}>$ </span>
-              <span style={{ color: 'rgb(var(--foreground-rgb))' }}>cat exp.txt</span>
+              <span className="command-input">cat exp.txt</span>
             </div>
             <div className="command-output" style={{ color: 'rgb(var(--foreground-rgb))' }}>
               <div className="space-y-4">
@@ -221,12 +246,12 @@ export default function Home() {
 
           {/* Projects Section */}
           <div className="terminal-section">
-            <div className="mb-1">
-              <span style={{ color: 'rgb(var(--terminal-green))' }}>guest@portfolio</span>
+            <div className="mb-1 flex items-center">
+              <span className="command-prompt">robert@portfolio</span>
               <span style={{ color: 'rgb(var(--foreground-rgb))' }}>:</span>
               <span className="text-yellow-400">~</span>
               <span style={{ color: 'rgb(var(--foreground-rgb))' }}>$ </span>
-              <span style={{ color: 'rgb(var(--foreground-rgb))' }}>cat proj.txt</span>
+              <span className="command-input">cat proj.txt</span>
             </div>
             <div className="command-output" style={{ color: 'rgb(var(--foreground-rgb))' }}>
               <div className="space-y-4">
@@ -248,12 +273,12 @@ export default function Home() {
 
           {/* Contact Section */}
           <div className="terminal-section">
-            <div className="mb-1">
-              <span style={{ color: 'rgb(var(--terminal-green))' }}>guest@portfolio</span>
+            <div className="mb-1 flex items-center">
+              <span className="command-prompt">robert@portfolio</span>
               <span style={{ color: 'rgb(var(--foreground-rgb))' }}>:</span>
               <span className="text-yellow-400">~</span>
               <span style={{ color: 'rgb(var(--foreground-rgb))' }}>$ </span>
-              <span style={{ color: 'rgb(var(--foreground-rgb))' }}>cat contact.txt</span>
+              <span className="command-input">cat contact.txt</span>
             </div>
             <div className="command-output" style={{ color: 'rgb(var(--foreground-rgb))' }}>
               <div className="flex flex-col md:flex-row items-start md:items-center gap-2 md:gap-8">
@@ -275,12 +300,12 @@ export default function Home() {
             {/* Command History */}
             {commandHistory.map((cmd, index) => (
               <div key={index} className="mb-2">
-                <div>
-                  <span style={{ color: 'rgb(var(--terminal-green))' }}>guest@portfolio</span>
+                <div className="flex items-center">
+                  <span className="command-prompt">robert@portfolio</span>
                   <span style={{ color: 'rgb(var(--foreground-rgb))' }}>:</span>
                   <span className="text-yellow-400">~</span>
                   <span style={{ color: 'rgb(var(--foreground-rgb))' }}>$ </span>
-                  <span style={{ color: 'rgb(var(--foreground-rgb))' }}>{cmd}</span>
+                  <span className="command-input">{cmd}</span>
                 </div>
                 <div className="command-output" style={{ color: 'rgb(var(--foreground-rgb))' }}>
                   {typeof outputHistory[index] === 'string'
@@ -292,7 +317,7 @@ export default function Home() {
             
             {/* Current Input */}
             <div className="flex items-center flex-wrap">
-              <span style={{ color: 'rgb(var(--terminal-green))' }}>guest@portfolio</span>
+              <span className="command-prompt">robert@portfolio</span>
               <span style={{ color: 'rgb(var(--foreground-rgb))' }}>:</span>
               <span className="text-yellow-400">~</span>
               <span style={{ color: 'rgb(var(--foreground-rgb))' }}>$ </span>
@@ -302,25 +327,39 @@ export default function Home() {
                 value={currentCommand}
                 onChange={(e) => setCurrentCommand(e.target.value)}
                 onKeyPress={handleKeyPress}
-                className="bg-transparent border-none outline-none flex-1 focus:outline-none focus:ring-0 ml-2"
-                style={{ color: 'rgb(var(--foreground-rgb))' }}
-                placeholder="type `help` for available commands"
+                className="bg-transparent border-none outline-none flex-1 focus:outline-none focus:ring-0 ml-2 command-input"
+                style={{ color: 'rgb(var(--terminal-cyan))' }}
+                placeholder="type 'help' for available commands"
               />
+              {showCursor && <span className="cursor text-green-400">|</span>}
             </div>
           </div>
 
           {/* Social Links and Connected Status */}
-          <div className="flex space-x-6 mt-12">
-            <a href="https://github.com/robert-nguyenn" target="_blank" rel="noopener noreferrer" className="terminal-link">
+          <div className="flex space-x-6 mt-12 mb-12">
+            <a href="https://github.com/robert-nguyenn" target="_blank" rel="noopener noreferrer" className="terminal-link hover:scale-110 transition-transform">
               <FiGithub className="w-6 h-6" />
             </a>
-            <a href="https://linkedin.com/in/robert-nguyenn" target="_blank" rel="noopener noreferrer" className="terminal-link">
+            <a href="https://linkedin.com/in/robert-nguyenn" target="_blank" rel="noopener noreferrer" className="terminal-link hover:scale-110 transition-transform">
               <FiLinkedin className="w-6 h-6" />
             </a>
-            <a href="mailto:robert.nguyennh@gmail.com" className="terminal-link">
+            <a href="mailto:robert.nguyennh@gmail.com" className="terminal-link hover:scale-110 transition-transform">
               <FiMail className="w-6 h-6" />
             </a>
           </div>
+        </div>
+
+        {/* Terminal Status Bar */}
+        <div className="terminal-status-bar">
+          <div className="flex items-center space-x-2">
+            <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+            <span>Connected</span>
+          </div>
+          <span>Lines: {commandHistory.length + 10}</span>
+          <span>Shell: zsh</span>
+          <span>Encoding: UTF-8</span>
+          <div className="flex-1"></div>
+          <span>robert@portfolio:~</span>
         </div>
       </div>
     </div>

@@ -49,8 +49,11 @@ const education = {
 
 export default function Experience() {
   return (
-    <div className="min-h-screen bg-black text-green-400 px-6 py-8" style={{ color: 'rgb(var(--terminal-green))' }}>
-      <div className="max-w-4xl mx-auto terminal-glass p-6">
+    <div className="min-h-screen bg-black text-green-400 px-6 py-8 relative" style={{ color: 'rgb(var(--terminal-green))' }}>
+      {/* Matrix background */}
+      <div className="matrix-bg"></div>
+      
+      <div className="max-w-4xl mx-auto terminal-glass p-6 relative">
         <Header currentPath="~/experience" />
         
         <div className="space-y-8">

@@ -5,14 +5,17 @@
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap');
 
 :root {
-  --foreground-rgb: 255, 255, 255;
-  --background-rgb: 0, 0, 0;
-  --terminal-green: 0, 255, 0;
-  --terminal-blue: 0, 150, 255;
-  --terminal-yellow: 255, 255, 0;
-  --terminal-red: 255, 0, 0;
-  --terminal-purple: 255, 0, 255;
-  --terminal-cyan: 0, 255, 255;
+  --foreground-rgb: 200, 200, 200;
+  --background-rgb: 12, 12, 12;
+  --terminal-green: 50, 205, 50;
+  --terminal-blue: 100, 149, 237;
+  --terminal-yellow: 255, 215, 0;
+  --terminal-red: 255, 69, 0;
+  --terminal-purple: 186, 85, 211;
+  --terminal-cyan: 64, 224, 208;
+  --terminal-bright-green: 144, 238, 144;
+  --terminal-dim-white: 169, 169, 169;
+  --terminal-orange: 255, 165, 0;
 }
 
 * {
@@ -29,9 +32,13 @@ body {
   color: rgb(var(--foreground-rgb));
   background: rgb(var(--background-rgb));
   font-family: 'JetBrains Mono', monospace;
-  font-size: 15px;
-  line-height: 1.6;
+  font-size: 14px;
+  line-height: 1.4;
   overflow-x: hidden;
+  /* Terminal-like text rendering */
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 /* Terminal cursor animation */
@@ -185,9 +192,58 @@ a:focus {
 
 /* Terminal border */
 .terminal-glass {
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  border-radius: 12px;
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(50, 205, 50, 0.3);
+  border-radius: 8px;
+  box-shadow: 
+    0 0 20px rgba(50, 205, 50, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  background: rgba(12, 12, 12, 0.95);
+  backdrop-filter: blur(10px);
+  position: relative;
+}
+
+/* Terminal scan lines effect */
+.terminal-glass::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(50, 205, 50, 0.03) 2px,
+      rgba(50, 205, 50, 0.03) 4px
+    );
+  pointer-events: none;
+  border-radius: 8px;
+}
+
+/* Terminal glow effect */
+.terminal-glass::after {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, 
+    rgba(50, 205, 50, 0.1), 
+    rgba(64, 224, 208, 0.1),
+    rgba(50, 205, 50, 0.1)
+  );
+  border-radius: 10px;
+  z-index: -1;
+  opacity: 0.6;
+  animation: terminalGlow 2s ease-in-out infinite alternate;
+}
+
+@keyframes terminalGlow {
+  from { opacity: 0.3; }
+  to { opacity: 0.7; }
 }
 
 /* Windows terminal styling */
@@ -222,4 +278,43 @@ a:focus {
   color: #7ecbff;
   border-radius: 0;
   border-top: 1px solid rgba(0,150,255,0.2);
+}
+
+/* Matrix background animation */
+.matrix-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0.03;
+  pointer-events: none;
+  background: 
+    linear-gradient(90deg, transparent 0%, rgba(50, 205, 50, 0.1) 50%, transparent 100%),
+    radial-gradient(circle at 25% 25%, rgba(50, 205, 50, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 75% 75%, rgba(64, 224, 208, 0.1) 0%, transparent 50%);
+  animation: matrixFlow 20s linear infinite;
+}
+
+@keyframes matrixFlow {
+  0% { transform: translateY(-100%) rotate(0deg); }
+  100% { transform: translateY(100%) rotate(360deg); }
+}
+
+/* Enhanced command prompt styling */
+.command-prompt {
+  color: rgb(var(--terminal-bright-green));
+  font-weight: 600;
+  text-shadow: 0 0 5px rgba(50, 205, 50, 0.5);
+}
+
+.command-input {
+  color: rgb(var(--terminal-cyan));
+  font-weight: 500;
+}
+
+.command-output {
+  color: rgb(var(--terminal-dim-white));
+  line-height: 1.3;
 }
