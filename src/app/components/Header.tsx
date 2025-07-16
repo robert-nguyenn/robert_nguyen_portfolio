@@ -10,10 +10,13 @@ interface HeaderProps {
 }
 
 export default function Header({ currentPath, showBackButton = true }: HeaderProps) {
-  const [currentTime, setCurrentTime] = useState(new Date())
+  const [currentTime, setCurrentTime] = useState("")
+  const [mounted, setMounted] = useState(false)
 
   useEffect(() => {
-    const timer = setInterval(() => setCurrentTime(new Date()), 1000)
+    setMounted(true)
+    setCurrentTime(new Date().toLocaleTimeString())
+    const timer = setInterval(() => setCurrentTime(new Date().toLocaleTimeString()), 1000)
     return () => clearInterval(timer)
   }, [])
 
@@ -35,7 +38,7 @@ export default function Header({ currentPath, showBackButton = true }: HeaderPro
         {/* Terminal info */}
         <div className="flex items-center space-x-4 text-xs" style={{ color: 'rgb(var(--terminal-dim-white))' }}>
           <span>Shell: zsh</span>
-          <span>{currentTime.toLocaleTimeString()}</span>
+          {mounted && <span>{currentTime}</span>}
           <div className="flex items-center space-x-1">
             <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
             <span>Online</span>

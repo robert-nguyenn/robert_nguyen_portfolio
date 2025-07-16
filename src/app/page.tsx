@@ -13,7 +13,12 @@ export default function Home() {
   const [showCursor, setShowCursor] = useState(true)
   const [isTyping, setIsTyping] = useState(false)
   const [showFunFacts, setShowFunFacts] = useState(false)
+  const [mounted, setMounted] = useState(false)
   const inputRef = useRef<HTMLInputElement>(null)
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
 
   const commands = {
     help:
@@ -154,21 +159,23 @@ export default function Home() {
   }, [commandHistory, outputHistory])
 
   return (
-    <div className="min-h-screen bg-black text-green-400 px-6 py-8 relative" style={{ color: 'rgb(var(--terminal-green))' }}>
+    <div className="min-h-screen bg-black text-green-400 px-4 py-4 relative" style={{ color: 'rgb(var(--terminal-green))' }}>
       {/* Matrix background */}
       <div className="matrix-bg"></div>
       
-      <div className="max-w-4xl mx-auto terminal-glass p-6 relative">
+      <div className="max-w-4xl mx-auto terminal-glass p-4 relative">
         <Header currentPath="~" showBackButton={false} />
 
         {/* Terminal welcome message */}
-        <div className="mb-4 text-sm" style={{ color: 'rgb(var(--terminal-dim-white))' }}>
-          <div className="flex items-center space-x-2">
-            <span className="text-green-400">●</span>
-            <span>Last login: {new Date().toLocaleDateString()} at {new Date().toLocaleTimeString()}</span>
+        {mounted && (
+          <div className="mb-3 text-sm" style={{ color: 'rgb(var(--terminal-dim-white))' }}>
+            <div className="flex items-center space-x-2">
+              <span className="text-green-400">●</span>
+              <span>Last login: {new Date().toLocaleDateString()} at {new Date().toLocaleTimeString()}</span>
+            </div>
+            <div className="mt-1">Welcome to robert's portfolio terminal. Type 'help' for commands.</div>
           </div>
-          <div className="mt-1">Welcome to robert's portfolio terminal. Type 'help' for commands.</div>
-        </div>
+        )}
 
         {/* Main Content */}
         <div>
@@ -181,9 +188,9 @@ export default function Home() {
               <span style={{ color: 'rgb(var(--foreground-rgb))' }}>$ </span>
               <span className="command-input">whoami</span>
             </div>
-            <div className="command-output text-2xl font-bold flex items-center space-x-2" style={{ color: 'rgb(var(--foreground-rgb))' }}>
+            <div className="command-output text-xl font-bold flex items-center space-x-2" style={{ color: 'rgb(var(--foreground-rgb))' }}>
               <span>robert nguyen</span>
-              <span className="text-lg">ツ</span>
+              <span className="text-base">ツ</span>
               <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse ml-2"></div>
             </div>
           </div>
@@ -210,7 +217,7 @@ export default function Home() {
                 <p><span className="text-yellow-400">&gt;</span> {showFunFacts ? '[-]' : '[+]'} some fun facts about me:</p>
               </button>
               {showFunFacts && (
-                <div className="ml-8 space-y-1" style={{ color: 'rgb(var(--foreground-rgb))' }}>
+                <div className="ml-6 space-y-1" style={{ color: 'rgb(var(--foreground-rgb))' }}>
                   <p><span className="text-yellow-400">&gt;</span> built a multi-tenant backend powering an AI platform for 3,000+ enterprise users</p>
                   <p><span className="text-yellow-400">&gt;</span> engineered systems sustaining 2M+ API calls monthly at 99.99% uptime</p>
                   <p><span className="text-yellow-400">&gt;</span> developed RAG engine delivering 50k+ personalized recommendations/month</p>
@@ -230,7 +237,7 @@ export default function Home() {
               <span className="command-input">cat exp.txt</span>
             </div>
             <div className="command-output" style={{ color: 'rgb(var(--foreground-rgb))' }}>
-              <div className="space-y-4">
+              <div className="space-y-2">
                 <div className="flex items-center space-x-4">
                   <span className="text-yellow-400">drwxr-xr-x</span>
                   <span className="text-cyan-400">Propvia</span>
@@ -255,7 +262,7 @@ export default function Home() {
               <span className="command-input">cat proj.txt</span>
             </div>
             <div className="command-output" style={{ color: 'rgb(var(--foreground-rgb))' }}>
-              <div className="space-y-4">
+              <div className="space-y-2">
                 <div className="flex items-center space-x-4">
                   <span className="text-yellow-400">drwxr-xr-x</span>
                   <a href="https://github.com/robert-nguyenn/sphinx-no-code-quant-trading-platform" target="_blank" rel="noopener noreferrer" className="text-cyan-400">
@@ -337,7 +344,7 @@ export default function Home() {
           </div>
 
           {/* Social Links and Connected Status */}
-          <div className="flex space-x-6 mt-12 mb-12">
+          <div className="flex space-x-6 mt-8 mb-8">
             <a href="https://github.com/robert-nguyenn" target="_blank" rel="noopener noreferrer" className="terminal-link hover:scale-110 transition-transform">
               <FiGithub className="w-6 h-6" />
             </a>

@@ -54,7 +54,7 @@ export default function Experience() {
       <div className="matrix-bg"></div>
       
       <div className="max-w-4xl mx-auto terminal-glass p-6 relative">
-        <Header currentPath="~/experience" />
+        <Header currentPath="~/experience" showBackButton={true} />
         
         <div className="space-y-8">
           {/* Work Experience */}
