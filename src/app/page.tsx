@@ -233,7 +233,7 @@ export default function Home() {
                 <div className="flex items-center space-x-4">
                   <span className="text-yellow-400">drwxr-xr-x</span>
                   <a href="https://github.com/robert-nguyenn/sphinx-no-code-quant-trading-platform" target="_blank" rel="noopener noreferrer" className="text-cyan-400">
-                    sphinx trading platform<FiExternalLink className="inline w-3 h-3 ml-1" />
+                    sphere trading platform<FiExternalLink className="inline w-3 h-3 ml-1" />
                    </a>
                   <span className="text-gray-400">quant trading application</span>
                 </div>

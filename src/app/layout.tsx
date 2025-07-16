@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     description: "Computer Science Student at Centre College. Software Engineer specializing in distributed systems and databases.",
   },
   icons: {
-    icon: "/logo.svg"
+    icon: "/robert.png"
   },
 }
 
