@@ -218,10 +218,10 @@ export default function Home() {
               </button>
               {showFunFacts && (
                 <div className="ml-6 space-y-1" style={{ color: 'rgb(var(--foreground-rgb))' }}>
-                  <p><span className="text-yellow-400">&gt;</span> earned 2nd place in mathematics competition at centre college (2023-2024)</p>
+                  <p><span className="text-yellow-400">&gt;</span> earned 2nd place in mathematics competition at centre (2023-2024)</p>
                   <p><span className="text-yellow-400">&gt;</span> recipient of full-tuition scholarship at centre college for 4 years</p>
                   <p><span className="text-yellow-400">&gt;</span> awarded community-builder prize for excellence as resident assistant (2023-2024)</p>
-                  <p><span className="text-yellow-400">&gt;</span> vice president of math club and student leader of technology communities</p>
+                  <p><span className="text-yellow-400">&gt;</span> vice president of math club and student leader of technology communities at centre</p>
                   <p><span className="text-yellow-400">&gt;</span> advanced to final round interviews with amazon web services (AWS) (2025 cycle)</p>
                 </div>
               )}
