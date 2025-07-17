@@ -202,7 +202,7 @@ export default function Home() {
               <span style={{ color: 'rgb(var(--foreground-rgb))' }}>:</span>
               <span className="text-yellow-400">~</span>
               <span style={{ color: 'rgb(var(--foreground-rgb))' }}>$ </span>
-              <span className="command-input">cat about.txt</span>
+              <span className="command-input">show about.txt</span>
             </div>
             <div className="command-output space-y-1" style={{ color: 'rgb(var(--foreground-rgb))' }}>
               <p><span className="text-yellow-400">&gt;</span> hi, my name is robert! i'm studying computer science at centre college</p>
@@ -235,7 +235,7 @@ export default function Home() {
               <span style={{ color: 'rgb(var(--foreground-rgb))' }}>:</span>
               <span className="text-yellow-400">~</span>
               <span style={{ color: 'rgb(var(--foreground-rgb))' }}>$ </span>
-              <span className="command-input">cat exp.txt</span>
+              <span className="command-input">show exp.txt</span>
             </div>
             <div className="command-output" style={{ color: 'rgb(var(--foreground-rgb))' }}>
               <div className="space-y-2">
@@ -260,7 +260,7 @@ export default function Home() {
               <span style={{ color: 'rgb(var(--foreground-rgb))' }}>:</span>
               <span className="text-yellow-400">~</span>
               <span style={{ color: 'rgb(var(--foreground-rgb))' }}>$ </span>
-              <span className="command-input">cat proj.txt</span>
+              <span className="command-input">show proj.txt</span>
             </div>
             <div className="command-output" style={{ color: 'rgb(var(--foreground-rgb))' }}>
               <div className="space-y-2">
@@ -287,7 +287,7 @@ export default function Home() {
               <span style={{ color: 'rgb(var(--foreground-rgb))' }}>:</span>
               <span className="text-yellow-400">~</span>
               <span style={{ color: 'rgb(var(--foreground-rgb))' }}>$ </span>
-              <span className="command-input">cat contact.txt</span>
+              <span className="command-input">show contact.txt</span>
             </div>
             <div className="command-output" style={{ color: 'rgb(var(--foreground-rgb))' }}>
               <div className="flex flex-col md:flex-row items-start md:items-center gap-2 md:gap-8">

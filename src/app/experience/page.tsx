@@ -5,7 +5,7 @@ import Header from "../components/Header"
 const experiences = [
   {
     title: "Software Engineer Intern",
-    company: "Propvia",
+    company: "propvia",
     period: "Jun 2025 - Sep 2025",
     location: "Detroit, MI",
     description: "Built multi-tenant backend on PostgreSQL with Auth0 OAuth, powering AI property platform for 3,000+ enterprise users. Developed RAG engine using OpenAI GPT API and Pinecone, delivering 50k+ personalized recommendations/month with 40% latency reduction.",
@@ -13,7 +13,7 @@ const experiences = [
   },
   {
     title: "Software Engineer Intern", 
-    company: "Theta Zero Consulting",
+    company: "theta zero consulting",
     period: "Dec 2024 - May 2025",
     location: "Lexington, KY",
     description: "Delivered CRM SaaS for 1,100+ tattoo-studio users, driving $20k+ monthly recurring revenue. Reduced API latency 61% and implemented monitoring with OpenTelemetry, cutting error detection time by 83%.",
@@ -21,7 +21,7 @@ const experiences = [
   },
   {
     title: "Software Engineer Intern",
-    company: "Novatek Technology", 
+    company: "novatek technology", 
     period: "May 2024 - Nov 2024",
     location: "Hanoi, Vietnam",
     description: "Enhanced checkout reliability to 99.95% on 10k+ MAU e-commerce platform using stateless gRPC microservices. Reduced cloud costs 22% ($3k/month) by migrating to Fargate Spot and optimizing AWS infrastructure.",
@@ -29,7 +29,7 @@ const experiences = [
   },
   {
     title: "Undergraduate Researcher",
-    company: "Centre College — Computer Science Department", 
+    company: "centre college — cs department", 
     period: "Jan 2024 - May 2024",
     location: "Danville, KY",
     description: "Processed soccer telemetry into 11k+ events/second with 98% accuracy via multithreaded Python pipeline. Optimized BigQuery ETL, cutting query latency 60% and storage costs 30%.",
@@ -39,7 +39,7 @@ const experiences = [
 
 const education = {
   degree: "Bachelor of Science in Computer Science",
-  school: "Centre College",
+  school: "centre college",
   period: "Aug 2023 - May 2027",
   gpa: "3.89/4.0",
   location: "Danville, KY",
