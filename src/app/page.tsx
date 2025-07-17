@@ -214,14 +214,15 @@ export default function Home() {
                 onMouseEnter={(e) => e.currentTarget.style.color = 'rgb(var(--terminal-cyan))'}
                 onMouseLeave={(e) => e.currentTarget.style.color = 'rgb(var(--foreground-rgb))'}
               >
-                <p><span className="text-yellow-400">&gt;</span> {showFunFacts ? '[-]' : '[+]'} some fun facts about me:</p>
+                <p><span className="text-yellow-400">&gt;</span> {showFunFacts ? '[-]' : '[+]'} some achievements and fun facts about me:</p>
               </button>
               {showFunFacts && (
                 <div className="ml-6 space-y-1" style={{ color: 'rgb(var(--foreground-rgb))' }}>
-                  <p><span className="text-yellow-400">&gt;</span> built a multi-tenant backend powering an AI platform for 3,000+ enterprise users</p>
-                  <p><span className="text-yellow-400">&gt;</span> engineered systems sustaining 2M+ API calls monthly at 99.99% uptime</p>
-                  <p><span className="text-yellow-400">&gt;</span> developed RAG engine delivering 50k+ personalized recommendations/month</p>
-                  <p><span className="text-yellow-400">&gt;</span> reduced API latency 61% and cut cloud spend 22% through optimization</p>
+                  <p><span className="text-yellow-400">&gt;</span> earned 2nd place in mathematics competition at centre college (2023-2024)</p>
+                  <p><span className="text-yellow-400">&gt;</span> recipient of full-tuition scholarship at centre college for 4 years</p>
+                  <p><span className="text-yellow-400">&gt;</span> awarded community-builder prize for excellence as resident assistant (2023-2024)</p>
+                  <p><span className="text-yellow-400">&gt;</span> vice president of math club and student leader of technology communities</p>
+                  <p><span className="text-yellow-400">&gt;</span> advanced to final round interviews with amazon web services (AWS) (2025 cycle)</p>
                 </div>
               )}
             </div>
@@ -239,9 +240,9 @@ export default function Home() {
             <div className="command-output" style={{ color: 'rgb(var(--foreground-rgb))' }}>
               <div className="space-y-2">
                 <div className="flex items-center space-x-4">
-                  <span className="text-yellow-400">drwxr-xr-x</span>
-                  <span className="text-cyan-400">Propvia</span>
-                  <span className="text-gray-400">software engineer intern (jun 2025 - sep 2025)</span>
+                  <span className="text-yellow-400">→</span>
+                  <span className="text-cyan-400">propvia</span>
+                  <span className="text-gray-400">software engineer intern (june 2025 - september 2025)</span>
                 </div>
               </div>
               <div className="mt-1">
@@ -264,11 +265,11 @@ export default function Home() {
             <div className="command-output" style={{ color: 'rgb(var(--foreground-rgb))' }}>
               <div className="space-y-2">
                 <div className="flex items-center space-x-4">
-                  <span className="text-yellow-400">drwxr-xr-x</span>
+                  <span className="text-yellow-400">→</span>
                   <a href="https://github.com/robert-nguyenn/sphinx-no-code-quant-trading-platform" target="_blank" rel="noopener noreferrer" className="text-cyan-400">
                     sphere trading platform<FiExternalLink className="inline w-3 h-3 ml-1" />
                    </a>
-                  <span className="text-gray-400">quant trading application</span>
+                  <span className="text-gray-400">quantitative trading application</span>
                 </div>
               </div>
               <div className="mt-1">

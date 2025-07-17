@@ -11,13 +11,6 @@ const projects = [
     github: null,
     live: null
   },
-  {
-    name: "Distributed Task Scheduler",
-    description: "Event-driven Node.js backend with distributed messaging using RAG & LLMs, PostgreSQL, processing 12k+ market events while handling sub-300 ms latency",
-    tech: ["Node.js", "PostgreSQL", "Redis", "Docker", "Kubernetes", "Event-driven Architecture"],
-    github: null,
-    live: null
-  },
 ]
 
 const skills = {
