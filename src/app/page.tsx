@@ -5,6 +5,7 @@ import Link from "next/link"
 import { FiGithub, FiLinkedin, FiMail, FiExternalLink } from "react-icons/fi"
 import { catGifs } from "./jokes"
 import Header from "./components/Header"
+//fix
 
 export default function Home() {
   const [currentCommand, setCurrentCommand] = useState("")
