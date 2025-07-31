@@ -1,5 +1,5 @@
 "use client"
-
+//fix page.tsx
 import React, { useState, useEffect, useRef } from "react"
 import Link from "next/link"
 import { FiGithub, FiLinkedin, FiMail, FiExternalLink } from "react-icons/fi"
